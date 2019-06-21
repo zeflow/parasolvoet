@@ -1,14 +1,17 @@
 h=15;
+translate([-5,5,20]) rotate([0,180,0]) voet(h);
+
+module voet(h){
 difference(){
 union(){
-translate([0,0,0]) roundedCube([35,35,h],r=1);
-translate([-7/2,-7/2,h]) roundedCube([43,43,5],r=1);
+translate([0,0,0]) roundedCube([43,43,h],r=1);
+translate([-5/2,-5/2,h]) roundedCube([48,48,5],r=1);
 //translate([(-7/2)+(35/3),(-7/2)+(35/3),h+5]) #text("PAR");
 }
-translate([5/2,5/2,-1]) roundedCube([30,30,h+1],r=1);
+translate([5/2,5/2,-2]) roundedCube([38,38,h+1],r=1);
 }
 
-
+}
 
 module roundedCube(dim, r=1, x=false, y=false, z=true, xcorners=[true,true,true,true], ycorners=[true,true,true,true], zcorners=[true,true,true,true], $fn=128)
 {
